@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     }
   
     try {
-      const apiKey = process.env.TRACK_API_KEY; // Defina sua chave de API no .env.local ou nas variáveis de ambiente do Vercel
+      const apiKey = process.env.TRACK_API_KEY;
       const response = await fetch(`https://api.17track.net/track?number=${trackingNumber}&api_key=${apiKey}`);
       const data = await response.json();
   
